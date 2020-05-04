@@ -46,7 +46,7 @@ config interface 'lan'
         option dns '192.168.0.1'
 ```
 
-**Step 6:** Download the full image <a href="https://raw.githubusercontent.com/fragtion/openwrt-hardware/master/tenda-a6/images/openwrt-ramips-rt305x-a6-squashfs-sysupgrade.bin">openwrt-ramips-rt305x-a6-squashfs-sysupgrade.bin</a> image to the device, and proceed with inplace upgrade as follows:
+**Step 6:** Download the full image <a href="https://raw.githubusercontent.com/fragtion/openwrt-hardware/master/tenda-a6/images/openwrt-ramips-rt305x-a6-squashfs-sysupgrade.bin">openwrt-ramips-rt305x-a6-squashfs-sysupgrade.bin</a> to `/tmp` folder on the device, and proceed with inplace upgrade as follows:
 
 ```
 cd /tmp
@@ -58,7 +58,7 @@ The device will self-reboot, and will take about 5 minutes before you can ping 1
 
 You can then log in via SSH as root, with no password. At this point you should change the root password.
 
-**Step 7:** Done! Boot it up and you're ready to go to Post-flashing
+**Step 7:** Done! You're now ready to go to Post-flashing
 
 ### Method 2 - Upgrade via SPI Programmer (Full image flash)
 **Step 1:** Ensure that the device is not powered by USB
@@ -187,7 +187,7 @@ If you think you bricked the device, you can probably still recover using a CH34
 
 After flashing the uboot with SPI programmer, power-cycle the device while holding down the reset button, and upload new image via TFTP:
 
-`tftp -i 192.168.1.1 PUT openwrt-ramips-rt305x-tenda_a6-squashfs-sysupgrade.bin`
+`tftp -i 192.168.1.1 PUT openwrt-ramips-rt305x-a6-squashfs-sysupgrade.bin`
 
 *Please note that the device will not respond to pings during the uboot/tftp process. But if you do everything right, you should see a TFTP success message, and then wait about 5-10 minutes for flashing, after which you can ping and SSH to 192.168.1.1*
 
