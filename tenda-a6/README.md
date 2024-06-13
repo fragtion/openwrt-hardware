@@ -72,7 +72,7 @@ You can then log in via SSH as root, with no password. At this point you should 
 ### Method 3 - Upgrade by SPI Programmer (TFTP image from new uboot)
 **Step 1:** Ensure that the device is not powered by USB
 
-**Step 2:** Flash OpenWrt-compatible uboot <a href="https://raw.githubusercontent.com/fragtion/openwrt-hardware/master/tenda-a6/bootloader/uboot256.bin">uboot256.bin</a> using using SPI programmer of choice
+~**Step 2:** Flash OpenWrt-compatible uboot <a href="https://raw.githubusercontent.com/fragtion/openwrt-hardware/master/tenda-a6/bootloader/uboot256.bin">uboot256.bin</a> using using SPI programmer of choice~ _actually, this seems to break wifi mac - use it only for troubleshooting_
 
 **Step 3:** Verify flashed image if programmer supports it
 
